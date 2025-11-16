@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumo de APIs com JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Consumo de APIs com JavaScript</h1>
+        <p>Requisições HTTP com Fetch API e Async/Await</p>
+      </header>
+      <main>
+        <!-- Seção de Requisição GET -->
+        <section class="section get-section">
+          <h2>GET - Buscar Posts</h2>
+          <p class="description">
+            Busca os 5 primeiros posts da API JSONPlaceholder
+          </p>
+          <button id="getBtn" class="btn btn-primary">Buscar Posts</button>
+          <div id="getLoading" class="loading hidden">Carregando...</div>
+          <div id="getError" class="error hidden"></div>
+          <div id="getResult" class="result"></div>
+        </section>
+
+        <!-- Seção de Requisição POST -->
+        <section class="section post-section">
+          <h2>POST - Criar Novo Post</h2>
+          <p class="description">Cria um novo post na API</p>
+          <form id="postForm" class="form">
+            <div class="form-group">
+              <label for="userIdInput">ID do Usuário:</label>
+              <input
+                type="number"
+                id="userIdInput"
+                min="1"
+                max="10"
+                value="1"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="titleInput">Título:</label>
+              <input
+                type="text"
+                id="titleInput"
+                placeholder="Digite o título do post"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="bodyInput">Conteúdo:</label>
+              <textarea
+                id="bodyInput"
+                rows="4"
+                placeholder="Digite o conteúdo do post"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">Criar Post</button>
+          </form>
+
+          <div id="postLoading" class="loading hidden">Enviando...</div>
+          <div id="postError" class="error hidden"></div>
+          <div id="postResult" class="result"></div>
+        </section>
+
+        <!-- Seção de Requisição DELETE -->
+        <section class="section delete-section">
+          <h2>DELETE - Deletar Post</h2>
+          <p class="description">Deleta um post específico da API</p>
+          <div class="form-group">
+            <label for="postIdInput">ID do Post para Deletar:</label>
+            <input
+              type="number"
+              id="postIdInput"
+              min="1"
+              max="100"
+              value="1"
+              required
+            />
+          </div>
+
+          <button id="deleteBtn" class="btn btn-danger">Deletar Post</button>
+
+          <div id="deleteLoading" class="loading hidden">Deletando...</div>
+          <div id="deleteError" class="error hidden"></div>
+          <div id="deleteResult" class="result"></div>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          <a href="https://jsonplaceholder.typicode.com/" target="_blank"
+            >JSONPlaceholder API</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
