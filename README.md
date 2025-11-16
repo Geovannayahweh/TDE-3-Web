@@ -85,9 +85,3 @@ try {
    - **GET**: Clique em "Buscar Posts"
    - **POST**: Preencha o formulário e clique em "Criar Post"
    - **DELETE**: Insira um ID e clique em "Deletar Post"
-
----
-
-**Desenvolvido com JavaScript, Fetch API e Async/Await**
-
-Criado: 15 de novembro de 2025
